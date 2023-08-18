@@ -21,6 +21,10 @@ optional arguments:
 
 ​                        预期爬取的页数(一页20条)
 
-  --outputfile OUTPUTFILE, -o OUTPUTFILE
+  --outputtype OUTPUTTYPE, -o OUTPUTTYPE
 
-​                        输出文件名,默认为ip
+​                        输出文件类型,默认为txt
+
+  --intervaldays INTERVALDAYS, -i INTERVALDAYS
+
+​                        时间搜索的间隔时间,默认为1秒
