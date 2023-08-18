@@ -10,7 +10,7 @@ file_ip = 'ip'
 folder_ip = './result/'
 loop_max = 1000
 headers={
-    'cookie':'fofa_token=""'
+    'cookie':'fofa_token="eyJhbGciOiJIUzUxMiIsImtpZCI6Ik5XWTVZakF4TVRkalltSTJNRFZsWXpRM05EWXdaakF3TURVMlkyWTNZemd3TUdRd1pUTmpZUT09IiwidHlwIjoiSldUIn0.eyJpZCI6Mjk0NjMyLCJtaWQiOjEwMDE2Njc5NywidXNlcm5hbWUiOiI3NzQiLCJleHAiOjE2OTIzNzA3MTV9.HW-7XVfO8USPL27tbHfehLQQRRg6xB82OIgep4N7vWhB6rNJsmrEq8GidVcZ8klbdFTd9Q30AE-9v0jOPv36xw"'
 }
 
 # 统计目前提取的ip个数
@@ -72,7 +72,7 @@ def sec_ip(search_data,max_page):
 
 def day_ip(search_data,all_page):
     folder_exists()
-    all_num = all_page * 20
+    all_num = int(all_page) * 20
     max_page = 1
     #获取当前时间
     current_time = datetime.now()
@@ -90,7 +90,7 @@ def day_ip(search_data,all_page):
         if loop_time >= int(all_page):
             de_weight_ips = de_weight()
             if de_weight_ips < all_num:
-                print('还剩' + str(all_num - de_weight_ips) + '条没有提取！')
+                print('还剩' + str(all_num - de_weight_ips) + '条没有提取!')
             break
 
 
