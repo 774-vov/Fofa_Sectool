@@ -114,17 +114,17 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Fofa_Sectool 使用说明:')
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('--searchdata', '-s', help='fofa搜索语句')
+    parser.add_argument('--pagecount', '-c', help='预期爬取的页数(一页20条),默认为1页', default='1')
     parser.add_argument('--timesleep', '-t', help='爬取每一页等待秒数,防止IP被Ban,默认为3秒', default=3)
     parser.add_argument('--timeout', '-to', help='爬取每一页的超时时间', default=10)
-    parser.add_argument('--pagecount', '-c', help='预期爬取的页数(一页20条),默认为1页', default='1')
     parser.add_argument('--outputtype', '-o', help='输出文件类型,默认为txt', default='txt')
     parser.add_argument('--intervaldays', '-i', help='时间搜索的间隔时间,默认为1秒', default=1)
     args = parser.parse_args()
 
-    time_sleep = int(args.timesleep)
     search_data = args.searchdata
-    time_out = int(args.timeout)
     page_count = int(args.pagecount)
+    time_sleep = int(args.timesleep)
+    time_out = int(args.timeout)
     output_type = args.outputtype
     output_file = '_' + search_data
     file = config.output_folder + output_file

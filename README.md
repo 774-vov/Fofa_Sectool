@@ -7,7 +7,11 @@ optional arguments:
 
   --searchdata SEARCHDATA, -s SEARCHDATA
 
-​                        fofa搜索语句
+​                        fofa搜索语句,必填
+
+  --pagecount PAGECOUNT, -c PAGECOUNT
+
+​                        预期爬取的页数(一页20条),默认1页
 
   --timesleep TIMESLEEP, -t TIMESLEEP
 
@@ -16,10 +20,6 @@ optional arguments:
   --timeout TIMEOUT, -to TIMEOUT
 
 ​                        爬取每一页的超时时间，默认为10秒
-
-  --pagecount PAGECOUNT, -c PAGECOUNT
-
-​                        预期爬取的页数(一页20条)
 
   --outputtype OUTPUTTYPE, -o OUTPUTTYPE
 
